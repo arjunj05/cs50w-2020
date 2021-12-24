@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <style>
+            form { text-align: center;}
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 25%;
+                height: 20ppx;
+            }
+            #sbar {
+                width: 500px;
+                padding: 10px;
+                padding-left: 20px;
+                border: 2px gray solid;
+                border-radius: 25px;
+                
+            }
+            #links
+            {
+                text-align: end;
+                margin: 20px;
+            }
+            #sButtons {
+                color: gray;
+                
+                font-family:Arial, Helvetica, sans-serif;
+                font-weight: normal;
+                font-size: 15px;
+            }
+
+
+            
+        </style>
+    </head>
+
+    <body>
+        <div id = "links">
+            <a href="advSearch1.html">
+                Click For Advanced Search
+            </a>
+            <br> </br>
+            <a href="imgSearch1.html">
+            Click For Image Search
+            </a>
+        </div>
+
+        <br> </br>
+
+        <img alt = "Google Icon" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png" >
+        
+        <form action="https://google.com/search">
+            <input type="text" id = "sbar" name="q">
+            <br></br>
+            <div id = "sButtons">
+                <input type="submit" value="Google Search">
+                &nbsp;
+                <input type="submit" value = "I'm Feeling Lucky" name = "btnI">
+            </div>  
+        </form>
+
+        
+          
+
+        
+    </body>
+</html>
