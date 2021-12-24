@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AdvancedSearch</title>
+        <style>
+            img{
+                width: 80px;
+                margin-left: 10px;
+                margin-top: 10px
+            }
+            #header{
+                color: red;
+                font-size: 20px;
+                font-weight: normal;
+                margin-left: 30px;
+            }
+            label{
+                margin-left: 30px;
+                padding-bottom: 10px;
+            }
+            input{
+                width: 500px;
+                
+            }
+
+            
+            #links{
+                text-align: end;
+               
+            }
+            #submitB {
+                
+                width: 120px;
+                height: 30px;
+                background-color: blue;
+                margin-left: 608px;
+                color: white;
+            }
+        </style>
+        <header>
+            <img alt = "google images Icon" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/368px-Google_2015_logo.svg.png">
+            <div id = "links">
+                <a href="searchFinal.html">
+                    Back
+                </a>
+            </div>
+            
+            <div id = "header">
+                Advanced Search
+            </div>
+            <hr>
+
+            
+        </header>
+    </head>
+    <body>
+        <form action="https://google.com/search">
+            
+            <label for "as_q"> All these Words:</label>
+            <input type="text" style = "margin-left: 80px;" name="as_q"> <br> </br>
+
+            <label for "as_epq"> This exact word or phrase:</label>
+            <input type="text" style = "margin-left: 16px;"name="as_epq">  <br> </br>
+
+            <label for "as_oq"> Any of these Words:</label>
+            <input type="text" style = "margin-left: 55px;" name="as_oq">  <br> </br>
+
+            <label for "as_eq"> None of these Words:</label>
+            <input type="text" style = "margin-left: 48px;" name="as_eq">  <br> </br>
+
+           
+            <input type="submit"  id = "submitB" value="Advanced Search">
+            
+            
+        </form>
+        
+        
+    </body>
+</html>
