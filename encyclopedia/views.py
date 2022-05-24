@@ -65,7 +65,7 @@ def edit(request, name):
         title = name
         content = request.POST.get('c')
         util.save_entry(title,content)
-        return HttpResponseRedirect(reverse("wiki:index"))
+        return HttpResponseRedirect(reverse("wiki:page", kwargs={'name':name} ))
     return render(request, "encyclopedia/edit.html", {"entry": util.get_entry(name),"name": name })
     
 

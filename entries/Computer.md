@@ -1,1 +1,1 @@
-#thing about computer
+#title of computer page

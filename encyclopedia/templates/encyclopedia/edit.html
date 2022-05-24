@@ -3,7 +3,7 @@
 
 {% block body %}
     <h1> Change Markdown to Edit Page</h1>
-    <form action = "{%url 'wiki:page' name %}" method = "post">
+    <form action = "{%url 'wiki:edit' name %}" method = "post">
     {% csrf_token %}
     <textarea name = 'c' rows = "5" cols = "50"> {{entry}} </textarea>
     <input type = "submit">
