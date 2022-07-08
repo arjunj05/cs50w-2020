@@ -1,0 +1,12 @@
+{% extends "auctions/layout.html" %}
+
+{% block body%}
+    
+
+    {%  if request.user == winner %}
+        Congrats, you won this auctions for {{ soldFor }} dollars
+    {% else %}
+        Sorry, someone else won this auction
+    {% endif %}
+
+{% endblock%}

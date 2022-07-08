@@ -1,0 +1,36 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Active Listings</h2>
+
+    TODO
+    <ul>
+        {%  for listObj in lists %}
+            <li> 
+                <a href = "{% url 'listing' listObj.id %}" >
+                    {{ listObj.title }}
+                </a> 
+                <br> </br>
+                price:
+                {{ listObj.price }}
+                <br> </br>
+                {% if listObj.imageURL != "" %}
+                    <img src={{ listObj.imageURL }} alt = "Image Unabled to Be Rendered" width=100>
+                {% else %}
+                    No Image Provided
+                {% endif %}
+                <br> </br>
+                Description: 
+                {{ listObj.description }}
+                <br> </br>
+                {% if listObj.category != "" %}
+                    {{ listObj.category }}
+                {% else %}
+                    No Category provided 
+                {% endif %}
+                
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

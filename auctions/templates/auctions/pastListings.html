@@ -1,0 +1,34 @@
+{% extends "auctions/layout.html" %}
+
+{% block body%}
+
+<h1>
+    listings
+</h1>
+<ul>
+    {% for obj in objs %}
+    <li> 
+        <a href = "{% url 'past_listings' obj.id %}" >
+            {{ obj.title }}
+        </a>
+        {% if obj.imageURL != "" %}
+            <img src={{ obj.imageURL }} alt = "Image Unabled to Be Rendered" width=100>
+        {% else %}
+            No Image Provided
+        {% endif %}
+        <br> </br>
+        description: 
+        {{ obj.description }}
+        <br> </br>
+        {% if obj.category != "" %}
+            {{ obj.category }}
+        {% else %}
+            No Category provided 
+        {% endif %}
+    </li>
+    {% endfor %}
+                
+</ul>
+
+
+{% endblock%}
