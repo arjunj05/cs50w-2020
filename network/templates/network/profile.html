@@ -1,0 +1,63 @@
+{% extends "network/layout.html" %}
+{%load static%}
+
+{% block body%}
+
+    {% if profiler != user %}
+        <form action="{% url 'profile' profiler=profiler.username %}" method="post">
+            {% csrf_token %}
+            {% if isFollowing %}
+                <input type="submit" value="Unfollow">
+            {% else %}
+                <input type="submit" value="follow">
+            {% endif %}
+        </form>
+    {% endif %}
+    <h1>
+        Followers: {{numFollowers}}
+        Following: {{numFollowing}}
+    </h1>
+
+    <h2>
+        Page Number: {{ page.number }}
+    </h2>
+    {% for post in page.object_list %}
+        <div style="border-width: thin; padding: 20px;">
+            <h6>
+                {{ post.user.username }}
+            </h6>
+            <h3>
+                {{post.body}}
+            </h3>
+            <h6>
+                {{post.timestamp}}
+            </h6>
+            <div id="#edit_div" value={{ post.id }}>
+                {% if user == post.user%}
+                <button id="edit_button" value={{ post.id }}>
+                    edit
+                </button>
+                {% endif %}
+            </div>
+    
+            <div id="like_div" data-id={{ post.id }}>
+            
+            </div>
+        </div>
+        <br> </br>
+    {% endfor %}
+    <div>
+        {% if page.has_previous %}
+            <a href="{% url 'profile' profiler.username %}?page={{ page.previous_page_number }}">Previous</a>
+        {% endif %}
+        {% if page.has_next %}
+            <a href="{% url 'profile' profiler.username %}?page={{ page.next_page_number }}">Next</a>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'network/index.js' %}"> </script>
+{% endblock %}
+
+
