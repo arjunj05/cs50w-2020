@@ -1,0 +1,19 @@
+{% extends "carblog/layout.html" %}
+
+{% load static %}
+{% block body %} 
+    <p id="para">
+        <button id="filter">
+            filter
+        </button>
+        
+    </p>
+    <div id="articles">
+    </div>
+{% endblock %}
+
+
+
+{% block script %}
+<script src="{% static 'carblog/allposts.js' %}"> </script>
+{% endblock %}

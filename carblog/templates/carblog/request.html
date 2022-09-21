@@ -1,0 +1,23 @@
+{% extends "carblog/layout.html" %}
+
+{% block body %}
+<div id="request">
+    <h3>
+        We'd Love to Hear From You
+    </h3>
+    <br></br>
+    <p>
+        Please state the Model, brand, and year of the car in your comment and it will be sent to our blogger!
+    </p>
+    <form action="{% url 'request' %}" method="post">
+        {% csrf_token%}
+        <textarea name = 'content' rows = "5" style="width:100%"></textarea>
+        <br> </br>
+        <input class="btn btn-primary" type="submit">
+    </form>
+
+    {% if message %}
+     {{ message }}
+    {% endif %}
+</div>
+{%  endblock %}

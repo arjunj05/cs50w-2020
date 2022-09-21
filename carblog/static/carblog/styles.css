@@ -1,0 +1,137 @@
+.container{
+    padding: 0px;
+    width: 1000px;
+   border: thin solid black;
+    min-height: 10000px;
+    margin-top: 2px;
+    box-shadow: 2px 4px gray;
+}
+.nav{
+    padding:1%;
+}
+.tabs{
+    margin: 0 auto;
+}
+.nav-item{
+    padding-left: 40px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:aliceblue; 
+}
+.banner{
+    background-color: #00a2e2;
+    bottom: thin solid gray; 
+    
+
+}
+.body{
+    padding:15px;
+    min-height: 500px;
+   
+}
+.blog{
+    border-left: thin solid gray;
+    border-right: thin solid gray;
+    min-height: fit-content;
+    width: 75%;
+    height: 50%;
+    min-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+#articles {
+    display: flex;
+    flex-wrap: wrap;
+}
+#post{
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    height: 250px;
+}
+#post > a{
+    width: 50px;
+    overflow: hidden;
+
+}
+#para{
+    text-align: right;
+}
+#filterBox input{
+    text-align: left;
+    color: blue
+}
+
+.filterButton{
+    text-align: right;
+}
+#request > *{
+    text-align: center;
+}
+#request > h3{
+    text-align: center;
+}
+#request > p{
+    font-size: 10x;
+    color: gray;
+    text-align: center;
+}
+#about{
+    border-style:solid;
+    width: 450px;
+    height: 160px;;
+    margin: 50px;
+}
+#about-header{
+    color:gray;
+    font-size: 45px;
+    text-align: center;
+    padding: 40px;
+}
+#nav-link{
+    color: white;
+    font-size: 25px;;
+    padding:50px
+}
+#login{
+    float:right;
+    padding:1%;
+    color: white;
+    
+}
+.column{
+    size: 10%;
+    width:35%;
+    height: 350px;
+    float: left;
+    margin:7%;
+    
+}
+.column img{
+    width:350px;
+    
+}
+.column p,h4{
+    text-align: center;
+    padding:5%;
+    
+}
+.column h4{
+    font-weight: bold;
+}
+.column p{
+    color: gray;
+}
+
+form input,textarea{
+    padding:.75%;
+}
+ form input{
+    width:100%
+}
+

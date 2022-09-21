@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CarLine</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../static/carblog/styles.css">
+    {% block script %}
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <div id="login">
+                {% if user.is_authenticated %}
+                    Signed in as <strong>{{ user.username }}</strong>.
+                {% else %}
+                    Not signed in.
+                {% endif %}
+            </div>
+            <br> </br>
+            <div class="tabs">
+                <ul class="nav">
+                    {% if user.is_superuser %}
+                        <li class="nav-item">
+                            <a id="nav-link" href="{% url 'create' %}">
+                                Create Post
+                            </a>
+                        </li>
+                    {%endif %}
+                    <li class="nav-item">
+                        <a id="nav-link" href="{% url 'index' %}">
+                            About
+                        </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a id="nav-link" href="{% url 'logout' %}">
+                                Signout
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-link" href="{% url 'allposts' %}">
+                                Allposts
+                            </a>
+                        </li> 
+                        <li class="nav-item">
+                            <a id="nav-link" href="{% url 'request' %}">
+                                Request
+                            </a>
+                        </li>
+                        
+                    {% else %}
+                        <li class="nav-item">
+                            <a id="nav-link" href="{% url 'login' %}">
+                                Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-link" href="{% url 'register' %}">
+                                Register
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="nav-link" href="{% url 'request' %}">
+                                Request
+                            </a>
+                        </li>
+                        
+                    {% endif %}
+                </ul>
+            </div>
+            
+        </div>
+        <div class="body">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends "carblog/layout.html" %}
+{%  load static %}
+{%  block body %} 
+
+    <h1 id="fdj">
+        Create Post
+    </h1>
+    <div id="formDiv">
+        <form action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+            {{ newBlogForm }}
+            <br> </br>
+            <div>
+                Enter Markdown content
+                <br> </br>
+                <textarea name="content" style="width:100%;" rows="100"  id="contentInput" placeholder="Markdown"></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary mb-2" placeholder="Submit">
+        </form>
+        <br> </br>
+        {% if message %}
+            {{message}}
+        {% endif %}
+    </div>
+    
+  
+{%  endblock %}
+
+{% block script %}
+<script src="{% static 'carblog/create.js' %}"> </script>
+{% endblock %}
