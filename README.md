@@ -21,7 +21,7 @@ The motivation to create Carline.com stems from my younger brother Tejus. Saying
 
 This project meets the distinctiveness and complexity requirements for two reasons. First, it implemented new features that were not requirements in previous projects, and second, it synthesizes features from all the previous projects and packages them into a single web application.
 
-Most notable is the use of email.message and smtplib library to send car review requests and any other information in an asynchronous email to contact.carblog@gmail.com. In addition, CarLine displays pictures, carline uses static images as opposed to linked ones.
+Most notable is the use of email.message and smtplib library to send car review requests and any other information in an asynchronous email to hello.carblog@gmail.com. In addition, CarLine displays pictures, carline uses static images as opposed to linked ones.
 
 On top of this, to add to the distinctive side, this project gives special features inside the website to superusers. When the website actually gets deployed the only superuser will be Tejus. Since he is not particularly tech-savvy, I made sure he did not have to manipulate the website in the backend via Django-admin to add new blogs. Instead, the CarLine website recognizes if the user is a superuser, and only shows a link to the Create-Blog page. CarLine also prevents non-superusers from accessing the create blog page from the URL.
 
